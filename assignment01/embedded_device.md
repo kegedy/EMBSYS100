@@ -1,5 +1,7 @@
 ###### 1. Embedded device example Using the telegraph example, and the challenges listed in the module as reference, and describe another device that you would like to discuss. Describe how you think its embedded system works, and what design challenges it presents.
 
+![Embedded Device](pictures/EmbeddedDevice.jpg)
+
 - Throughput: Reading/writing thermometers temperatures, time, custom zones features, time furnace on/off, etc.
 - Response: How quickly does smart device read thermometers? How fast can it adjust the temperature of the zone?
 - Testability: Equipment should be universal for any house setup.
