@@ -66,4 +66,13 @@
     - Lastly the global variable "counter" increments itself (which also has address 0x20000000).
   <hr>
 
-###### 7.
+###### 7. Change the setting of IAR to run the same program on the evaluation board.
+  - What is the address where “counter” is stored?
+  - Is the “counter” variable stored in RAM or ROM?
+  - What is the value of “counter” at the end of the program (halting at the return 0 statement).
+
+  **Answer** <br>
+  - The counter variable is stored at address 0x20000000.
+  - The counter variable is stored as RAM. ROM is read only and is non-volitale such that the data will remain after the program is done running. Modifying the first line from `int counter = 0x0` to `int counter` did not keep the previous value of counter. Therefore counter is stored as RAM. 
+  - The value of counter is 4 at the end of the program.
+    <hr>
