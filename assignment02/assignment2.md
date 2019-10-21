@@ -38,5 +38,18 @@
   - The value of counter starts at value 4294967295 and increments to value 0 in the Locals window.
   - The N and V flags are not set. Since the value of counter is 0, the N flag is not set because it reads bit 31 and the V flag is not set because it reads bit 28.
   <hr>
+
+###### 5. Move the “counter’ variable outside of main (at the top of the file).
+  - What is the scope of the variable “counter”?
+  - Is it still visible in the “Locals” view?
+  - In which window view can we track “counter” now?
+  - What is the address of the “counter” variable in memory?
   
+  **Answer** <br>
+  - The scope of the counter variable is global.
+  - The counter variable is not visible in the Locals view.
+  - The counter variable can be tracked in the Statics window.
+  - The address of counter in memory is 0x20000000.
+  <hr>
   
+###### 6.
