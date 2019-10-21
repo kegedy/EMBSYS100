@@ -17,8 +17,8 @@
   - Please note if the N and/or V flags are set in the APSR register? Explain why?
 
   **Answer** <br>
-  - The value of counter increments by 1 starting at -1 (0XFFFFFFFF) in the Locals window. Counter is incremented 3 times so the final value of counter is 2.
-  - The N and V flags are not set. The next value of counter is 0, so there isn't a negative or overflow condition. 
+  - The value of counter starts at value -1 and increments to value 0 in the Locals window.
+  - The N and V flags are not set. Since the value of counter is 0, the N flag is not set because it reads bit 31 and the V flag is not set because it reads bit 28.
   <hr>
   
 ###### 3. Change the “counter” variable type in your code to “unsigned”. Inject the values “0x7FFFFFFF” then step thru the program to increment the “counter” once.
@@ -26,8 +26,17 @@
   - Please note if the N and/or V flags are set in the APSR register? Explain why?
 
   **Answer** <br>
-  - The value of counter in the Locals window is 2147483648 (0x80000000). Since the type is unsigned, the range for counter is 0 to  2^32 -1. Where as the range for int is - 2^31 to 2^31 -1.
-  - The N flag is set because it reads if there is a value in bit 31. Since 0x80000000 is equivalent to 0b10000000000000000000000000000001, the N flag is set. The V flag is not set because I have not incremented beyond the upper boundary of counter.
+  - The value of counter starts at value 2147483647 and increments to value 2147483648 (0x80000000) in the Locals window. Since the type is unsigned, the range for counter is 0 to  2^32 -1. Where as the range for int is - 2^31 to 2^31 -1.
+  - Since 0x80000000 is equivalent to 0b10000000000000000000000000000001, bit 31 is high and the N flag is set. Bit 28 has a value of 0 so the V flag is not set.
+  <hr>
+  
+###### 4. Change the “counter” variable type in your code to “unsigned”. Inject the values “0xFFFFFFFF” then step thru the program to increment the “counter” once.
+  - What is the value of “counter” in the “Locals” window after incrementing for each value?
+  - Please note if the N and/or V flags are set in the APSR register? Explain why?
+  
+  **Answer** <br>
+  - The value of counter starts at value 4294967295 and increments to value 0 in the Locals window.
+  - The N and V flags are not set. Since the value of counter is 0, the N flag is not set because it reads bit 31 and the V flag is not set because it reads bit 28.
   <hr>
   
   
