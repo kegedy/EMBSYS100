@@ -39,7 +39,7 @@
   - The N and V flags are not set. Since the value of counter is 0, the N flag is not set because it reads bit 31 and the V flag is not set because it reads bit 28.
   <hr>
 
-###### 5. Move the “counter’ variable outside of main (at the top of the file).
+###### 5. Move the “counter” variable outside of main (at the top of the file).
   - What is the scope of the variable “counter”?
   - Is it still visible in the “Locals” view?
   - In which window view can we track “counter” now?
@@ -52,4 +52,18 @@
   - The address of counter in memory is 0x20000000.
   <hr>
   
-###### 6.
+###### 6. Change the source code to the following, then run the program still in the simulator.
+  - What is the value of “counter” at the end of the program (halting at the return 0 statement)
+  - Explain why the counter value has changed?
+
+  **Answer** <br>
+  - The value of counter is 4 at the end of the program.
+  - The counter value has changed:
+    - Observation 1: `++number` operation is equivalent to increment first and then return number
+    - Observation 2: Expand expression `++(*p_int)` to `(*_p_int) = (*_p_int) + 1`
+    - Observation 3: `*p_int` points at the memory address (0x20000000) assigned to counter 
+    - Using these observations, we know the value at address 0x20000000 is incremented 3 times by `p_int`.
+    - Lastly the global variable "counter" increments itself (which also has address 0x20000000).
+  <hr>
+
+###### 7.
