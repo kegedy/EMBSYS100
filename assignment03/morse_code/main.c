@@ -8,6 +8,7 @@
 #define GPIOA_ODR (*((unsigned int*)(GPIOA_BASE + 0x14)))
 
 #define GPIOA (1<<5)
+#define UNIT ((int)500000)
 
 void ld2_on(int s) {
 // turns ld2 ON for s cycles. default state is off.
@@ -32,13 +33,13 @@ void ld2_off(int s) {
 
 void dot() {
 // morse code short duration
-  ld2_on(500000);ld2_off(500000);
+  ld2_on(UNIT);ld2_off(UNIT);
   return;
 }
 
 void dash() {
 // morse code long duration
-  ld2_on(1500000);ld2_off(500000);
+  ld2_on(3*UNIT);ld2_off(UNIT);
   return;
 }
 
@@ -114,9 +115,9 @@ int main()
     char name[5] = "kevin";
     for (int i=0;i<strlen(name);i++) {
       morse_code(name[i]);
-      ld2_off(1500000);
+      ld2_off(3*UNIT);
     }
-    ld2_off(10000000);
+    ld2_off(7*UNIT);
   }
   return 0;
 }
