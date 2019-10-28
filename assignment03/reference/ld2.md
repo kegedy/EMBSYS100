@@ -1,0 +1,6 @@
+![](images/LED_config.PNG)
+![](images/memory_map.PNG)
+![](images/peripheral_clock_gating.PNG)
+![](images/peripheral_clock_enable_register.PNG)
+![](images/GPIO_port_mode_register.PNG)
+![](images/GPIO_port_output_data_register.PNG)
