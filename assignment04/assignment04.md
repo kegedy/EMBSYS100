@@ -40,7 +40,7 @@ main:
 ```
 
 c. What extra code did the compiler generate inside the called function with the multiple list of arguments?<br>
-The compiler pushes registers R4-R8, LR onto the stack (total of 14 variables in the stack). The value at register R0 is moved into R4. And loads R5 from the address at SP offset by 0x18.
+The compiler pushes registers R4-R8, LR onto the stack (total of 14 variables in the stack). Moves value at register R0 into R4. And Loads the address at SP offset by 0x18 into R5. It performs the addition operations and then returns the registers we pushed at the beginning of the funtion.
 ```
 int sum(int arg0, int arg1, int arg2, int arg3, int arg4) {
 sum:
