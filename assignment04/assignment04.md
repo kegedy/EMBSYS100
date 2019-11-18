@@ -20,21 +20,23 @@ c) What were the instructions produced when writing to the GPIOx_ODR bit[5] dire
 
 2. Create a function with multiple arguments (5 arguments for example) and call that function from within another function. Trace through the assembler and note:<br><br>
 a. How does the calling function pass the values to the called function? <br>
-The calling function uses the stack to pass values to the called function.
-<br><br>
+The calling function pushes the arguments onto the stack in reverse order. <br><br>
+
 b. What extra code did the compiler generate before calling the function with the multiple arguments? <br>
+The compiler pushes registers R2-R8, LR onto the stack. Then it moves a value of 1 into a register corresponding to each parameter passed into the subfunction.
 ```
-    0x64: 0xe92d 0x41fc  PUSH.W    {R2-R8, LR}
-int arg0 = 1;
-    0x68: 0x2401         MOVS      R4, #1
-int arg1 = 1;
-    0x6a: 0x2501         MOVS      R5, #1
-int arg2 = 1;
-    0x6c: 0x2601         MOVS      R6, #1
-int arg3 = 1;
-    0x6e: 0x2701         MOVS      R7, #1
-int arg4 = 1;
-    0x70: 0xf05f 0x0801  MOVS.W    R8, #1
+main:
+        0x64: 0xe92d 0x41fc  PUSH.W    {R2-R8, LR}
+    int arg0 = 1;
+        0x68: 0x2401         MOVS      R4, #1
+    int arg1 = 1;
+        0x6a: 0x2501         MOVS      R5, #1
+    int arg2 = 1;
+        0x6c: 0x2601         MOVS      R6, #1
+    int arg3 = 1;
+        0x6e: 0x2701         MOVS      R7, #1
+    int arg4 = 1;
+        0x70: 0xf05f 0x0801  MOVS.W    R8, #1
 ```
 
 c. What extra code did the compiler generate inside the called function with the multiple list of arguments?<br>
