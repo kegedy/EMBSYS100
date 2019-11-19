@@ -1,4 +1,5 @@
 1. Using bit-band region for peripherals:<br><br>
+
 b) What instructions does the compiler produce in assembly for the “writing” to the GPIO bit when using bit-band address?
 
 ```
