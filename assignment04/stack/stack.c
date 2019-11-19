@@ -4,7 +4,7 @@
 // Backing store
 int StackStore[STACK_SIZE];
 
-// Pointers to queue elements for adding and retrieving
+// Pointers to stack elements for adding and retrieving
 int* Ptr;
 
 // Stack is Empty if putPtr==Ptr;
@@ -41,7 +41,6 @@ int stack_push(int data) {
     // Otherwise return success
  
     if (stack_full()){
-        // stack is full
         return -1;
     }  
     
@@ -61,6 +60,5 @@ int stack_pop(int* data) {
     }
 
     *data = *(--Ptr);
-    
     return 0;
 }
