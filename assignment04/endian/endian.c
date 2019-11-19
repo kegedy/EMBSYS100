@@ -6,4 +6,4 @@ void main(void)
   char* pChar = (char*)&myInt;
   if (pChar[0]) printf("Little Endian");
   else printf("Big Endian");
- }
+}
