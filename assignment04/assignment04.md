@@ -1,4 +1,4 @@
-1. Using bit-band region for peripherals:<br><br>
+1. Using bit-band region for peripherals:<br>
 
 b) What instructions does the compiler produce in assembly for the “writing” to the GPIO bit when using bit-band address?
 
@@ -19,7 +19,7 @@ c) What were the instructions produced when writing to the GPIOx_ODR bit[5] dire
     0x800'02c0: 0x6001         STR       R1, [R0]
 ```
 
-2. Create a function with multiple arguments (5 arguments for example) and call that function from within another function. Trace through the assembler and note:<br><br>
+2. Create a function with multiple arguments (5 arguments for example) and call that function from within another function. Trace through the assembler and note:<br>
 
 a. How does the calling function pass the values to the called function? <br>
 The calling function pushes the arguments onto the stack in reverse order. <br><br>
@@ -68,4 +68,5 @@ sum:
          0x60: 0xe8bd 0x81f0  POP.W     {R4-R8, PC}
 ```
 
-d. Any other observations?
+d. Any other observations?<br>
+I found it interesting the LR register was used to store the value of R3 in this function.
