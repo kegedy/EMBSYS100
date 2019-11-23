@@ -1,6 +1,7 @@
 1. Using bit-band region for peripherals:<br>
 
-b) What instructions does the compiler produce in assembly for the “writing” to the GPIO bit when using bit-band address?
+b) What instructions does the compiler produce in assembly for the “writing” to the GPIO bit when using bit-band address?<br>
+Instructions are load and store.
 
 ```
 *((unsigned int*)((0x42000000) + (0x20014 * 32) + (5 * 4))) = 0x1;
@@ -9,8 +10,8 @@ b) What instructions does the compiler produce in assembly for the “writing”
     0x800'0066: 0x600a         STR       R2, [R1]
 ```
 
-c) What were the instructions produced when writing to the GPIOx_ODR bit[5] directly?
-
+c) What were the instructions produced when writing to the GPIOx_ODR bit[5] directly?<br>
+Instructions are load, write, and store.
 ```
 *((unsigned int*)(0x40020000 + 0x14)) |= (1<<5);
     0x800'02b8: 0x480e         LDR.N     R0, [PC, #0x38]         ; GPIOA_ODR
