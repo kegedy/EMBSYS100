@@ -14,7 +14,7 @@
   
 ###### 3. Change the “counter” variable type in your code to “unsigned”. Inject the values “0x7FFFFFFF” then step thru the program to increment the “counter” once.
   - The value of counter starts at value 2147483647 and increments to value 2147483648 (0x80000000) in the Locals window. Since the type is unsigned, the range for counter is 0 to  2^32 -1. Where as the range for int is - 2^31 to 2^31 -1.
-  - The N and V flags are set.
+  - The N and V flags are set. These flags are set regardless of how the data was defined (signed or unsigned).
   <hr>
   
 ###### 4. Change the “counter” variable type in your code to “unsigned”. Inject the values “0xFFFFFFFF” then step thru the program to increment the “counter” once.
