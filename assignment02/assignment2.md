@@ -14,7 +14,7 @@
   
 ###### 3. Change the “counter” variable type in your code to “unsigned”. Inject the values “0x7FFFFFFF” then step thru the program to increment the “counter” once.
   - The value of counter starts at value 2147483647 and increments to value 2147483648 (0x80000000) in the Locals window. Since the type is unsigned, the range for counter is 0 to  2^32 -1. Where as the range for int is - 2^31 to 2^31 -1.
-  - Since 0x80000000 is equivalent to 0b10000000000000000000000000000001, bit 31 is high and the N flag is set. Bit 28 has a value of 0 so the V flag is not set.
+  - Since 0x80000000 is equivalent to 0b‭10000000000000000000000000000000‬, bit 31 is high and the N flag is set. Bit 28 has a value of 0 so the V flag is not set.
   <hr>
   
 ###### 4. Change the “counter” variable type in your code to “unsigned”. Inject the values “0xFFFFFFFF” then step thru the program to increment the “counter” once.
