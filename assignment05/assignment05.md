@@ -1,6 +1,8 @@
 1. Create a function that allows swapping of two pointers.<br>
 
 a. Explain what the “main” function does to the CSTACK in order setup the input arguments prior to calling the swap_pointer() function?<br>
+
+assembly| arguements       | description                                        
 ------- | ---------------- | ---------------------------------------------------
 PUSH    |  {R3-R7, LR}     | // pushes registers in reverse order onto stack
 LDR.N   |  R0, [PC, #0x18] | // load value at [PC + 0x18] into R0; 0xf'4240
@@ -11,6 +13,7 @@ ADD     |  R0, SP, #0xc    | // sum value at [SP + 0xC] into R0
 STR     |  R0, [SP, #0x4]  | // store value at R0 into address at [SP + 0x4]
 ADD     |  R0, SP, #0x8    | // sum value at [SP + 0x8] into R0
 STR     |  R0, [SP]        | // store value at R0 into address at [SP]
+
 ![](images/main_ADD&STR.PNG)
 
 b. And what are the values in R0 & R1 when swap_pointer() is called?<br>
