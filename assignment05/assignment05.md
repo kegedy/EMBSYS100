@@ -13,3 +13,6 @@ c. Share a screen shot of the local variables inside of “main” after the fun
 
 2. Run sqrAsm code from the class demo. <br>
 ![](TeraTerm_sqrAsm.PNG)
+
+3. Create a new file div2Asm.s and add the file to the same HelloWorld project above.  <br>
+![](TeraTerm_div2Asm.PNG)
