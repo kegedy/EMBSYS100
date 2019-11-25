@@ -2,7 +2,7 @@
 
 a. Explain what the “main” function does to the CSTACK in order setup the input arguments prior to calling the swap_pointer() function?<br>
 
-assembly| arguements       | description                                        
+assembly| arguments       | description                                        
 ------- | ---------------- | ---------------------------------------------------
 PUSH    |  {R3-R7, LR}     | // pushes registers in reverse order onto stack
 LDR.N   |  R0, [PC, #0x18] | // load value at [PC + 0x18] into R0; 0xf'4240
