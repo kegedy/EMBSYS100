@@ -17,8 +17,7 @@ STR     |  R0, [SP]        | // store value at R0 into address at [SP]
 ![](images/main_ADD&STR.PNG)
 
 b. And what are the values in R0 & R1 when swap_pointer() is called?<br>
-Register R0 is 0x200003F0 and R1 is 0x00000000 when swap_pointer is called. <br>
-Register R0 is 0x200003EC and R1 is 0x200003E8 after swap_pointer is returned.
+Register R0 is 0x200003EC and R1 is 0x200003E8 when swap_pointer is called.  They hold the values at locations [SP] and [SP + 0x4].
 
 c. Share a screen shot of the local variables inside of “main” after the function swap_pointer() returns, showing the values of the pointers and what they are pointing to.<br>
 ![](images/swap_return.PNG)
