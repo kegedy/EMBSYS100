@@ -47,7 +47,7 @@ Return value    : None
 
 delay
     // <TODO: Add your code for the function here>
-    CMP       R0, #0         
+    CMP R0, #0         
     BGT branch0           // R0>0 then jump to branch0
     BX LR                 // else return   
     branch0:              // R0>0
