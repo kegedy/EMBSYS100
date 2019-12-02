@@ -13,7 +13,7 @@ ADD     |  R0, SP, #0xc    | // sum value at [SP + 0xC] into R0
 STR     |  R0, [SP, #0x4]  | // store value at R0 into address at [SP + 0x4]
 ADD     |  R0, SP, #0x8    | // sum value at [SP + 0x8] into R0
 STR     |  R0, [SP]        | // store value at R0 into address at [SP]
-MOV     |  R1, SP          | // copy value at SP into R1
+MOV     |  R1, SP          | // copy SP into R1
 ADD     |  R0, SP, #0x4    | // sum value at [SP + 0x4] into R0
 BL      |  swap_pointer    | // update PC and LR
 
