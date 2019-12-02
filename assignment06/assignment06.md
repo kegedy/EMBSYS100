@@ -1,6 +1,6 @@
-1. [blink](https://github.com/kegedy/EMBSYS100/tree/master/assignment06) <br>
+1. [blink_CMSIS](https://github.com/kegedy/EMBSYS100/tree/dev/assignment06/blink_CMSIS) <br>
 
-2. [control_user_led](https://github.com/kegedy/EMBSYS100/tree/master/assignment06) <br>
+2. [control_user_led](https://github.com/kegedy/EMBSYS100/tree/dev/assignment06/control_user_led) <br>
 
 3. Generate the map file for your program and provide details on:<br>
 
