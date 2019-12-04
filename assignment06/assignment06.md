@@ -4,14 +4,14 @@
 
 3. Generate the map file for your program and provide details on:<br>
 
-a. How much total ROM your program is occupying?<br>
+- a. How much total ROM your program is occupying?<br>
 296 bytes
 
-b. How much total RAM your program is using?<br>
+- b. How much total RAM your program is using?<br>
 8192 bytes
 
-c. What part of your program is using the most ROM?<br>
+- c. What part of your program is using the most ROM?<br>
 rt7M_tl.a contains the largest proportion of the ROM which includes the vector_table object file.
 
-d. What part of your program is using the most RAM?<br>
+- d. What part of your program is using the most RAM?<br>
 The RAM is entirely composed of the Linker.
