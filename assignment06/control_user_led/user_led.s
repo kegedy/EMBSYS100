@@ -54,19 +54,19 @@ control_user_led
     // <TODO: Add your code for the function here>
     MOVW R2, #0x0014
     MOVT R2, #0x4002
-    LDR R3, [R2]
-    CMP R0, #1         
-    BEQ branch0
-    BICS.W R3, R3, #32
-    STR R3, [R2]
-    B branch1
-    branch0:
-        ORRS.W R3, R3, #32
-        STR R3,[R2]
-    branch1:    
-        PUSH {LR}       // Save the input arguments as needed and LR
-        MOV.W R0, R1
-        BL delay
-        POP {LR}        // Restore Risgters and LR
-        BX LR           // Return
+    LDR R3, [R2]            // move value at GPIOA->ODR into R3
+    CMP R0, #1              // state == 1?     
+    BEQ branch0             // if equal move to branch0; state == LED_ON
+    BICS.W R3, R3, #32      // clear bit 5
+    STR R3, [R2]            // store new value in GPIOA->ODR
+    B branch1               // jump to branch1
+    branch0:                // LED_ON
+        ORRS.W R3, R3, #32  // write 1 to bit 5
+        STR R3,[R2]         // store new value in GPIOA->ODR
+    branch1:                // LED_OFF
+        PUSH {LR}           // Save the input arguments as needed and LR
+        MOV.W R0, R1        // Copy delay value in R1 to R0
+        BL delay            // branch to delay function
+        POP {LR}            // Restore Risgters and LR
+        BX LR               // Return
     END
