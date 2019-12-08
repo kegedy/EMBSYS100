@@ -5,12 +5,18 @@
 	- d. Enable the use of the SysTick timer and its interrupt.
 	- e. Replace the delay() function with the use of the SysTick timer to blink the user LED.
 	- f. Set a break point inside the SysTick_Handler interrupt and capture a snapshot of the stack once inside the interrupt and LR value. Explain what are the values stored on the stack at the moment the Handler gets invoked
-
-2. Bonus: Improve your delay function to rely on the use of the SysTick time instead of the busy-wait loop.
-![]
-
+	
+The value of LR is `0xFFFFFFE9` which is one of the `EXC_RETURN` values. The exception returns to thread mode and uses floating-point state from MSP.
 ![](images/SysTick_Handler.PNG)
 
 ![](images/EXC_RETURN.PNG)
 
 ![](images/stack_frame.PNG)
+
+<br><br>
+
+2. Bonus: Improve your delay function to rely on the use of the SysTick time instead of the busy-wait loop.<br>
+![main.c](https://github.com/kegedy/EMBSYS100/blob/dev/assignment07/SysTick/main.c)
+
+
+
