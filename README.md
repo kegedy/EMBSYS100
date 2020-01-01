@@ -1,4 +1,4 @@
-### EMBSYS100 - Fall 2019
+### Fundamentals Of Embedded And Real-Time Systems - Fall 2019
 
 #### Module 1
 
