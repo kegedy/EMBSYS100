@@ -1,0 +1,21 @@
+stm32f4xx_usart.pbi: \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common\stm32f4xx_usart.c \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/stm32f4xx_usart.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/stm32f4xx.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/core_cm4.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common\core_cmInstr.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\cmsis_iar.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c/iccarm_builtin.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common\core_cmFunc.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common\core_cmSimd.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/system_stm32f4xx.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/stm32f4xx_conf.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/stm32f4xx_gpio.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/stm32f4xx_rcc.h \
+  C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\General\HelloWorld_Lecture_04\common/misc.h

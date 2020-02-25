@@ -1,0 +1,193 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  04/Nov/2019  19:13:58
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\Exe\main.out
+#    Map file     =
+#        C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\List\main.map
+#    Command line =
+#        -f C:\Users\tameraw\AppData\Local\Temp\EW5107.tmp
+#        (C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\Obj\main.o
+#        --no_out_extension -o
+#        C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\Exe\main.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\List\main.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\arm\config\linker\ST\stm32f401xE.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 8K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'7fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code   0x800'0000    0x40  vector_table_M.o [3]
+                             - 0x800'0040    0x40
+
+"P1":                                       0x14c
+  .text              ro code   0x800'0040    0x66  main.o [1]
+  .text              ro code   0x800'00a6    0x2e  copy_init3.o [3]
+  .text              ro code   0x800'00d4    0x28  data_init.o [3]
+  Initializer bytes  const     0x800'00fc    0x28  <for P2-1>
+  .iar.init_table    const     0x800'0124    0x14  - Linker created -
+  .text              ro code   0x800'0138    0x1e  cmain.o [3]
+  .text              ro code   0x800'0156     0x4  low_level_init.o [2]
+  .text              ro code   0x800'015a     0x4  exit.o [2]
+  .text              ro code   0x800'015e     0x2  vector_table_M.o [3]
+  .text              ro code   0x800'0160     0xa  cexit.o [3]
+  .text              ro code   0x800'016c    0x14  exit.o [4]
+  .text              ro code   0x800'0180     0xc  cstartup_M.o [3]
+  .rodata            const     0x800'018c     0x0  copy_init3.o [3]
+                             - 0x800'018c   0x14c
+
+"P2", part 1 of 2:                           0x28
+  P2-1                        0x2000'0000    0x28  <Init block>
+    .data            inited   0x2000'0000    0x14  main.o [1]
+    .data            inited   0x2000'0014    0x10  main.o [1]
+    .data            inited   0x2000'0024     0x4  main.o [1]
+                            - 0x2000'0028    0x28
+
+"P2", part 2 of 2:                         0x2000
+  CSTACK                      0x2000'0028  0x2000  <Block>
+    CSTACK           uninit   0x2000'0028  0x2000  <Block tail>
+                            - 0x2000'2028  0x2000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'018c   0x807'ffff  0x7'fe74
+  0x2000'2028  0x2001'7fff  0x1'5fd8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x28:
+           0x800'00fc  0x28
+    1 destination range, total size 0x28:
+          0x2000'0000  0x28
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\Obj: [1]
+    main.o                102       40       40
+    -------------------------------------------
+    Total:                102       40       40
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    copy_init3.o           46
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    -------------------------------------------
+    Total:                204
+
+shb_l.a: [4]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created                  20    8'192
+-----------------------------------------------
+    Grand Total:          336       60    8'232
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base    0x800'0124         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0138         --   Gb  - Linker created -
+?main                    0x800'0139        Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0028         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'2028         --   Gb  - Linker created -
+Region$$Table$$Base      0x800'0124         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0138         --   Gb  - Linker created -
+__cmain                  0x800'0139        Code  Gb  cmain.o [3]
+__exit                   0x800'016d  0x14  Code  Gb  exit.o [4]
+__iar_copy_init3         0x800'00a7  0x2e  Code  Gb  copy_init3.o [3]
+__iar_data_init3         0x800'00d5  0x28  Code  Gb  data_init.o [3]
+__iar_program_start      0x800'0181        Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'0157   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000        Data  Gb  vector_table_M.o [3]
+_call_main               0x800'0145        Code  Gb  cmain.o [3]
+_exit                    0x800'0161        Code  Gb  cexit.o [3]
+_main                    0x800'0153        Code  Gb  cmain.o [3]
+exit                     0x800'015b   0x4  Code  Gb  exit.o [2]
+getIncorrectArraySize    0x800'00a1   0x6  Code  Gb  main.o [1]
+main                     0x800'0041  0x50  Code  Gb  main.o [1]
+myCharArray             0x2000'0014  0x10  Data  Gb  main.o [1]
+myIntArray              0x2000'0000  0x14  Data  Gb  main.o [1]
+myIntPtr                0x2000'0024   0x4  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\tameraw\OneDrive\Documents\Education\UW_Embedded_Certificate\01_EMBSYS100B_AU19_Tamer\workspace\Module05_Demo06_Arrays_and_Pointers\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    336 bytes of readonly  code memory
+     60 bytes of readonly  data memory
+  8'232 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
