@@ -1,5 +1,10 @@
 ### Fundamentals Of Embedded And Real-Time Systems - Fall 2019
 
+
+#### Resources
+- An Embedded Software Primer, by David E. Simon - 1st Edition
+- The Definitive Guide to ARM Cortex-M3 and Cortex-M4 Processors, by Joseph Yiu - 3rd Edition
+
 #### Module 1
 
 Embedded Background Topics
@@ -76,3 +81,4 @@ Serial Communication
 #### Module 10
 
 Class Review
+
